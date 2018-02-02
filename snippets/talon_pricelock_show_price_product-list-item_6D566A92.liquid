@@ -1,0 +1,27 @@
+
+          {% if on_sale %}
+          <span class="sale">{{ 'products.product.on_sale' | t }}</span>
+          {% endif %}
+          {% if sold_out %}
+          <span class="sold-out">{{ 'products.product.sold_out' | t }}</span>
+          <span class="original-price">
+          {% endif %}
+
+          {% if on_sale %}
+            {% if bold_price_varies %}
+              <span class="from">{{ 'products.general.from' | t }}</span>
+              <span class="original-price">{{ bold_compare_at_price | money }}</span>
+              {{ bold_price | money }}
+            {% else %}
+              <span class="original-price">{{ bold_compare_at_price | money }}</span>
+              {{ bold_price | money }}
+            {% endif %}
+          {% else %}
+            {% if bold_price_varies %}<span class="from">{{ 'products.general.from' | t }}</span>{% endif %}
+            {{ bold_price | money }}
+          {% endif %}
+
+          {% if sold_out %}
+          </span>
+          {% endif %}
+        

@@ -1,0 +1,80 @@
+
+          <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="form-vertical">
+
+            <div class="product-title">
+              <h1 itemprop="name">{{ product.title }}</h1>
+              {% if settings.product_vendor_enable %}
+                <span class="vendor">{{ product.vendor | link_to_vendor }}</span>
+              {% endif %}
+            </div>
+
+            <div class="selection-wrapper price">
+              <span class="money" id="ProductPrice" itemprop="price" content="{{ bold_price | money_without_currency | remove: ',' }}">{{ bold_price | money }}</span>
+              {% if bold_compare_at_price_max > bold_price %}
+                <p id="ComparePrice">
+                  {{ 'products.product.compare_at' | t }} <span class="money">{{ current_variant.compare_at_price | money }}</span>
+                </p>
+              {% endif %}
+            </div>
+
+            {% comment %}
+              Add product variants as a dropdown.
+                - By default, each variant (or combination of variants) will display as its own <option>
+                - To separate these into multiple steps, which we suggest, use option_selection.js (see below)
+
+              You can leverage jQuery to add a callback on page load and each time the select element changes:
+                - Include option_selection.js (as seen at the bottom of this file)
+                - This allows you to use JavaScript anytime the variant dropdown changes
+                - This also separates out your variant options (ie. size, color, etc.) to separate select elements
+
+              For more information on products with multiple options, visit:
+                - http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-products-with-multiple-options#update-product-liquid
+            {% endcomment %}
+            <div class="selection-wrapper variant">
+              <div class="variant-grid">
+                <select name="id" id="productSelect" class="full-select product-select">
+                  {% for variant in product.variants %}
+                  {% include 'bold-variant' with variant, hide_action: 'skip' %}
+                    {% if variant.available %}
+                      {% comment %}
+                        Note: if you use option_selection.js, your <select> tag will be overwritten, meaning what you have inside <option> will not reflect what you coded below.
+                      {% endcomment %}
+                      <option {% if variant == bold_selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+                    {% else %}
+                      <option disabled="disabled">
+                        {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                      </option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+
+
+            <div class="error cart-error"></div>
+            <div class="selection-wrapper cart">
+              {% if settings.product_quantity_enable %}
+                <div class="selector-wrapper quantity">
+                  <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
+                  <div class="quantity-select">
+                    <div class="button-wrapper">
+                      <button class="adjust adjust-minus">-</button>
+                    </div>
+                    <div class="input-wrapper">
+                      <input type="text" class="quantity" value="1" min="1" pattern="[0-9]*" name="quantity" id="Quantity">
+                    </div>
+                    <div class="button-wrapper">
+                      <button class="adjust adjust-plus">+</button>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+              <div class="button-wrapper">
+                <button type="submit" name="add" id="AddToCart" class="button solid" >
+                  <span id="AddToCartText" data-added="{{ 'products.product.added_to_cart' | t }}" data-adding="{{ 'products.product.adding_to_cart' | t }}">{{ 'products.product.add_to_cart' | t }}</span>
+                </button>
+              </div>
+            </div>
+
+          </form>
+          
