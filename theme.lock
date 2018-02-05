@@ -319,6 +319,8 @@ templates/page.about.liquid:
   development: 2017-03-18T17:35:04-04:00   36a96ed24396f0ca5acea2e4ecc30236
 templates/page.contact.liquid:
   development: 2017-03-18T17:35:04-04:00   9eb8ee7e5655bf744f73e681644a4204
+templates/page.delivery.liquid:
+  development: 2018-02-02T15:50:45-05:00   2426555544d0cc7888b6db2748fea25b
 templates/page.faq.liquid:
   development: 2017-03-18T17:35:04-04:00   93f6606745e847d4dbcde486ef8b3a47
 templates/page.liquid:
