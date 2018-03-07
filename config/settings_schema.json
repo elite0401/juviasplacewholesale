@@ -2822,6 +2822,20 @@
           }
         ],
         "default": "3"
+      },
+      {
+        "type": "header",
+        "content": "Delivery text"
+      },
+      {
+        "type": "text",
+        "id": "product_detail_delivery_text",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "product_detail_delivery_url",
+        "label": "Link"
       }
     ]
   },

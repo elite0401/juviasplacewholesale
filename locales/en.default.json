@@ -73,7 +73,7 @@
       "remove": "Remove",
       "note": "Special instructions for seller",
       "subtotal": "Subtotal",
-      "shipping_at_checkout": "Shipping & taxes calculated at checkout",
+      "shipping_at_checkout": "Shipping & taxes calculated at checkout. Duties & Taxes included in price on all non-US orders.",
       "currency_at_checkout_html": "{{ shop_name }} process all orders in {{ shop_currency }}. While the content of your cart is currently displayed in <span class=\"selected-currency\"><\/span>, you will check out using {{ shop_currency }} at the most current exchange rate.",
       "update": "Update Cart",
       "checkout": "Check Out",
