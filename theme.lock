@@ -110,7 +110,7 @@ assets/vendor.js.liquid:
 assets/vncv.js:
   development: 2017-03-18T17:35:02-04:00   d24883a9d1623ad362924fc5ed74c572
 config/settings_data.json:
-  development: 2017-03-18T17:34:56-04:00   46e7f6f8d69eff0e3da434f5bac3f9d2
+  development: 2018-02-15T01:43:41-05:00   a625b3f5da6dbd3d1c3dbb5b6b9c0cc7
 config/settings_schema.json:
   development: 2018-02-06T09:13:15-05:00   d8560be72afb50a7a9dd6135bf2e45d6
 layout/theme-backup-social-sign-in.liquid:
@@ -118,7 +118,7 @@ layout/theme-backup-social-sign-in.liquid:
 layout/theme.bak.2017-03-04@19-53-07utc.liquid:
   development: 2017-03-18T17:35:02-04:00   31939161a9733acdd463100832b45590
 layout/theme.liquid:
-  development: 2018-02-06T08:39:46-05:00   6e9fd2cf7d16a34bd6a825e7d9441bc7
+  development: 2018-02-20T12:41:33-05:00   b1eea4243842be43336d85187c1378b3
 locales/de.json:
   development: 2017-03-18T17:35:04-04:00   1670a779116576147849c231e4b6cf56
 locales/en.default.json:
@@ -182,7 +182,7 @@ snippets/instagram-product.liquid:
 snippets/instagram.liquid:
   development: 2017-03-18T17:35:03-04:00   91faec767e49be08ea0d21d2d1684dc8
 snippets/lion-wholesale.liquid:
-  development: 2018-01-30T10:42:05-05:00   0ed23a430824c8b0b756b16e05a6eeb2
+  development: 2018-02-06T12:12:03-05:00   42f6e4f69dba939eca33a5d56fa095bc
 snippets/livechat_monitoring_code.liquid:
   development: 2017-03-18T17:35:03-04:00   69e138b8fc78ef8f3440762f9c896be3
 snippets/newsletter-subscribe.liquid:
@@ -250,7 +250,7 @@ snippets/social-icons.liquid:
 snippets/social-meta-tags.liquid:
   development: 2017-03-18T17:35:03-04:00   0a5632d8ea24cf3005027f177af797c5
 snippets/social-share.liquid:
-  development: 2017-03-18T17:35:03-04:00   8b4eb38d11f8147bce022370aa8af7ca
+  development: 2018-03-01T12:57:56-05:00   8b4eb38d11f8147bce022370aa8af7ca
 snippets/src-from-text.liquid:
   development: 2017-03-18T17:35:03-04:00   44aea766312481ca710dcda710f665ac
 snippets/tags-article.liquid:
